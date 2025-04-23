@@ -47,9 +47,9 @@ for i in range(1, 32):
         result.append(text)
 
     # print(result)
-# print(result[12])
+
     print(result[13]) # 날짜
-# print(result[14])
+
     rlist = result[14].split('\n') # 시청률 데이터 줄별로 쪼개기
 
     answer = []
@@ -68,12 +68,6 @@ for i in range(1, 32):
         r = r.split(' ')
         answer.append(r)
     print(answer[3:])
-
-# columns = ['순위', '채널', '프로그램', '시청률']
-
-# df = pd.DataFrame(data=answer[3:], columns=columns)
-
-# df.to_csv('/home/ubuntu/damf2/data/nielsen/2024-07-01.csv', sep=',')
 
     # 데이터 저장
     save_to_csv(answer[3:], result[13])
